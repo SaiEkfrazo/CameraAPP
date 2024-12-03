@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Camera Feed</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    video {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Live Camera Feed</h1>
+  <video id="camera-feed" controls autoplay>
+    Your browser does not support the video tag.
+  </video>
+  
+  <script>
+    const cameraFeedElement = document.getElementById('camera-feed');
+    const errorMessageElement = document.getElementById('error-message');
+  
+    // Get the camera feed URL from Django's template context
+    const cameraFeedUrl = "{% url 'camera_feed' %}";
+  
+    // Set the video source to the camera feed URL
+    cameraFeedElement.src = cameraFeedUrl;
+  </script>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Live Camera Feed</title>
+   <style>
+     body {
+       font-family: Arial, sans-serif;
+       margin: 20px;
+     }
+     h1 {
+       color: #333;
+     }
+     video {
+       max-width: 100%;
+       height: auto;
+       border: 1px solid #ccc;
+     }
+     .error {
+       color: red;
+     }
+   </style>
+ </head>
+ <body>
+   <h1>Live Camera Feed</h1>
+   <video id="camera-feed" controls autoplay>
+     Your browser does not support the video tag.
+   </video>
+ 
+   <script>
+     const cameraFeedElement = document.getElementById('camera-feed');
+   
+     // Use the direct API endpoint for the camera feed
+     const cameraFeedUrl = "/camera-feed/";  // Replace with the correct API endpoint
+ 
+     // Set the video source to the camera feed URL
+     cameraFeedElement.src = cameraFeedUrl;
+   </script>
+ </body>
+ </html>
+ 
